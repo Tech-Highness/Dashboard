@@ -1,77 +1,128 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bicycle Market Layout</title>
-    <!-- Link to the CSS file -->
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <header>
-        <nav class="actions">
-            <a href="#">Buyers</a>
-            <a href="#">Sellers</a>
-            <a href="#">Bikes</a>
-            <a href="#">Stores</a>
-            <a href="#">Price</a>
-        </nav>
-    </header>
+body {
+    font-family: Arial, sans-serif;
+}
 
-    <div class="container">
-        <!-- Summaries Section -->
-        <div class="summaries">
-            <h3>Summaries</h3>
-            <ul>
-                <li><a href="#">New stocks</a></li>
-                <li><a href="#">Listed for sale</a></li>
-                <li><a href="#">Total sold</a></li>
-                <li><a href="#">Sales per brand</a></li>
-                <li><a href="#">Listings total</a></li>
-                <li><a href="#">Average sales per brand</a></li>
-                <li><a href="#">Totals per brand</a></li>
-                <li><a href="#">Totals by stores</a></li>
-            </ul>
-        </div>
+.container {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 20px;
+    padding: 20px;
+}
 
-        <!-- Image Section -->
-        <div class="main-image">
-            <img src="bikes.jpg" alt="Bicycles" />
-        </div>
+/* Navigation actions */
+.actions {
+    grid-column: 1 / span 3;
+    display: flex;
+    justify-content: space-around;
+    background-color: #f1f1f1;
+    padding: 10px 0;
+}
 
-        <!-- Bike Brands Section -->
-        <div class="bike-brands">
-            <h3>Bike Brands</h3>
-            <ul>
-                <li><a href="#">Electra</a></li>
-                <li><a href="#">Haro</a></li>
-                <li><a href="#">Heller</a></li>
-                <li><a href="#">Trek</a></li>
-                <li><a href="#">Pure Cycles</a></li>
-                <li><a href="#">Ritchey</a></li>
-                <li><a href="#">Sun bicycles</a></li>
-                <li><a href="#">Surly</a></li>
-                <li><a href="#">Strider</a></li>
-            </ul>
-        </div>
+.actions a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
 
-        <!-- Shops Section -->
-        <div class="shops">
-            <h3>Our shops globally</h3>
-            <ul>
-                <li><a href="#">United States of America</a></li>
-                <li><a href="#">United Kingdom</a></li>
-                <li><a href="#">South Africa</a></li>
-            </ul>
-        </div>
+/* Summaries section */
+.summaries {
+    grid-column: 1;
+    background-color: #f9f9f9;
+    padding: 15px;
+    border: 1px solid #ddd;
+}
 
-        <!-- Message Section -->
-        <div class="message">
-            <h3>We help your dreams come true!!</h3>
-            <p>We help you sell, and help you buy!!<br>
-               We connect you to the global bicycle market!!
-            </p>
-        </div>
-    </div>
-</body>
-</html>
+.summaries h3 {
+    margin-bottom: 10px;
+}
+
+.summaries ul {
+    list-style: none;
+    padding: 0;
+}
+
+.summaries li {
+    margin-bottom: 8px;
+}
+
+.summaries a {
+    text-decoration: none;
+    color: #333;
+}
+
+/* Main image section */
+.main-image {
+    grid-column: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-image img {
+    width: 100%;
+    max-width: 500px;
+    border: 1px solid #ddd;
+}
+
+/* Bike brands section */
+.bike-brands {
+    grid-column: 3;
+    background-color: #f9f9f9;
+    padding: 15px;
+    border: 1px solid #ddd;
+}
+
+.bike-brands h3 {
+    margin-bottom: 10px;
+}
+
+.bike-brands ul {
+    list-style: none;
+    padding: 0;
+}
+
+.bike-brands li {
+    margin-bottom: 8px;
+}
+
+.bike-brands a {
+    text-decoration: none;
+    color: #333;
+}
+
+/* Shops section */
+.shops {
+    grid-column: 3;
+    background-color: #f9f9f9;
+    padding: 15px;
+    border: 1px solid #ddd;
+    margin-top: 20px;
+}
+
+.shops h3 {
+    margin-bottom: 10px;
+}
+
+.shops ul {
+    list-style: none;
+    padding: 0;
+}
+
+.shops li {
+    margin-bottom: 8px;
+}
+
+.shops a {
+    text-decoration: none;
+    color: #333;
+}
+
+/* Message section */
+.message {
+    grid-column: 2 / span 2;
+    background-color: #f1f1f1;
+    padding: 20px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
